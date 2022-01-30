@@ -133,6 +133,16 @@ def schedule(msg):
         minutes_to_work=minutes_to_work-next_task.time_est
     return ret
 
+def print
+	arr_weights=[]
+	arr_urgency=[]
+	for i in range(taskLink):
+		arr_weights[i].append(taskLink[i].time_est)
+		arr_urgency[i].append(taskLink[i].urgency)
+	arr_final = knapSack(480, arr_weights, arr_urgency, arr_weights.length)
+	for i in range(arr_final)
+		message.channel.send(tasklist[arr_final[i]].name, tasklist[arr_final[i]].due_date, tasklist[arr_final[i]].time_est)
+
 #for each possible command, send it to its resepective function and 
 # send the user back its output
 async def handle_message(message):
@@ -147,11 +157,11 @@ async def handle_message(message):
         #just lists commands
     elif message.content.lower().startswith("/show_tasks") or message.content.lower().startswith("/show"):
         await message.channel.send(show_tasks(message.content.lower()))
-    elif message.content.lower().startswith("/finish_task") or message.content.lower().startswith("/finish"):
+    elif message.content.lower().startswith("/finish_task") or message.content.lower().startswith("/finish") or message.content.lower().startswith("/f"):
         await message.channel.send(finish_task(message.content.lower()))
-    elif message.content.lower().startswith("/edit_task") or message.content.lower().startswith("/edit"):
+    elif message.content.lower().startswith("/edit_task") or message.content.lower().startswith("/edit") or message.content.lower().startswith("/e"):
         await message.channel.send(edit_task(message.content.lower()))
-    elif message.content.lower().startswith("/schedule") or message.content.lower().startswith("/sched"):
+    elif message.content.lower().startswith("/schedule") or message.content.lower().startswith("/sched") or message.content.lower().startswith("/s"):
         await message.channel.send(schedule(message.content.lower()))
     elif message.content.lower().startswith("/help"):
         await message.channel.send(help_task(message.content.lower()))
